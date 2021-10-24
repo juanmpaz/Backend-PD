@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 24-10-2021 a las 05:12:31
+-- Tiempo de generación: 24-10-2021 a las 06:17:20
 -- Versión del servidor: 10.4.21-MariaDB
 -- Versión de PHP: 8.0.10
 
@@ -28,13 +28,20 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `productos` (
+  `id` int(255) NOT NULL,
+  `nombre` varchar(100) NOT NULL,
   `descripcion` varchar(256) NOT NULL,
   `precio` int(50) NOT NULL,
   `disponible` tinyint(1) NOT NULL,
-  `id` int(255) NOT NULL,
-  `nombre` varchar(100) NOT NULL,
   `categoria` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `productos`
+--
+
+INSERT INTO `productos` (`id`, `nombre`, `descripcion`, `precio`, `disponible`, `categoria`) VALUES
+(1501, 'Big Hamburguesa', 'Hamburguesa triple carne con salsa barbacoa', 350, 1, 'Comida rapida');
 
 -- --------------------------------------------------------
 
